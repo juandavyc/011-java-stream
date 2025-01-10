@@ -10,9 +10,17 @@ contenido de este en **Main.java**
 
 - Fake Data with Faker
 - Fake Data: Person and Pets 10/01/2025
-- Primitives
-
-
+- allMatch()
+- anyMatch()
+- collect()
+- distinct()
+- findFirst()
+- filter()
+- flatMap()
+- forEach()
+- forEachOrdered()
+- iterate()
+- peek()
 
 -
 ## Objetivo
