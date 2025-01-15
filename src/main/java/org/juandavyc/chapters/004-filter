@@ -1,18 +1,13 @@
 package org.juandavyc;
 
-import org.juandavyc.models.Cat;
 import org.juandavyc.models.Dog;
 import org.juandavyc.models.Pet;
 import org.juandavyc.models.enums.Character;
-import org.juandavyc.models.enums.Gender;
 import org.juandavyc.services.PersonServiceImpl;
 import org.juandavyc.services.PetServiceImpl;
 
-import javax.swing.text.html.Option;
-import java.util.*;
-import java.util.function.*;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
 
@@ -24,10 +19,23 @@ public class Main {
         var petService = new PetServiceImpl();
         // quitar lo inmutable
 
-        List<Pet> pets = new ArrayList<>(petService.getPetsStream());
-        System.out.println("Original");
+        List<Pet> list = new ArrayList<>(petService.getPetsStream());
 
-        pets.forEach(System.out::println);
+        System.out.println("Original");
+        list.forEach(System.out::println);
+
+        System.out.println("Filtrada");
+
+        var count = list.stream()
+                .filter(pet->pet instanceof Dog)
+                .peek(System.out::println)
+                .filter(pet->pet.getCharacter() == Character.GOOD)
+                .count();
+
+        System.out.println("Perros de mal comportamiento: "+count);
+
+
+
     }
 
 }

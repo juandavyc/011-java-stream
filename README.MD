@@ -13,7 +13,7 @@ contenido de este en **Main.java**
 - allMatch()
 - anyMatch()
 - collect()
-- distinct()
+- distinct() 
 - findFirst()
 - filter()
 - flatMap()

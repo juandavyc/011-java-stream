@@ -10,7 +10,7 @@ import java.io.Serial;
 import java.util.Set;
 
 @ToString(callSuper = true)
-@EqualsAndHashCode(callSuper = false)
+@EqualsAndHashCode(callSuper = true)
 public class Dog extends Pet{
 
     @Serial
