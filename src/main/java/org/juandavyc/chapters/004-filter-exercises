@@ -1,3 +1,7 @@
+
+        List<Pet> pets = new ArrayList<>(petService.getPetsStream());
+        pets.forEach(System.out::println);
+
 // Ejercicio 1: Filtrar gatos y perros por género
 // Supón que tienes una lista de Pet con gatos y perros.
 // Puedes utilizar un Predicate para filtrar por género

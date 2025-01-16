@@ -31,7 +31,7 @@ public class PetServiceImpl implements PetService {
                     random.nextBoolean() ? Integer.valueOf(faker.number().digits(1)) : null,
                     random.nextBoolean() ? Gender.MALE : Gender.FEMALE,
                     String.valueOf(faker.name().firstName()),
-                    faker.name().fullName(),
+                    random.nextBoolean() ? "raquel" : faker.name().firstName(),
                     random.nextBoolean() ? "withSpecialSkill" : null,
                     random.nextBoolean() ? Character.BAD : Character.GOOD,
                     random.nextBoolean()
