@@ -28,7 +28,7 @@ public class PetServiceImpl implements PetService {
             return Arrays.asList(
                     Float.valueOf(faker.number().digits(4)),
                     Float.valueOf(faker.number().digits(2)),
-                    random.nextBoolean() ? Integer.valueOf(faker.number().digits(1)) : null,
+                    Integer.valueOf(faker.number().digits(1)), //random.nextBoolean() ? Integer.valueOf(faker.number().digits(1)) : null,
                     random.nextBoolean() ? Gender.MALE : Gender.FEMALE,
                     String.valueOf(faker.name().firstName()),
                     random.nextBoolean() ? "raquel" : faker.name().firstName(),

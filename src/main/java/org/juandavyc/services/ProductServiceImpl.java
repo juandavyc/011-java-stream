@@ -26,10 +26,10 @@ public class ProductServiceImpl implements ProductService {
                 .atZone(ZoneId.systemDefault())
                 .toLocalDate();
 
-        var price = faker.commerce().price().replace(",",".");
+        var price = faker.commerce().price().replace(",", ".");
 
         return new ProductX(
-                random.nextBoolean() ? "Frutino" :   faker.commerce().productName(),
+                faker.commerce().productName(),
                 faker.commerce().promotionCode(),
                 faker.commerce().material(),
                 date,

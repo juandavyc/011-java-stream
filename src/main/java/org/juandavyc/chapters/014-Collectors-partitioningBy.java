@@ -46,8 +46,7 @@ public class Main {
 
 
         Collector<Pet, ? , Map<Boolean, List<PetDto>>> partitioningByy
-                = Collectors.partitioningBy(partition, mapping)
-                ;
+                = Collectors.partitioningBy(partition, mapping);
 
 
         var newMap = list.stream()
@@ -56,8 +55,6 @@ public class Main {
         newMap.get(isMale).stream()
                 .map(gsonConverter::toJson)
                 .forEach(System.out::println);
-
-
 
     }
 
